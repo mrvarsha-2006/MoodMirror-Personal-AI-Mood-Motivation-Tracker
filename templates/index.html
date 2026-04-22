@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Varsha Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Hi Varsha 👋</h1>
+
+<h2>🔥 Streak: {{ streak }}</h2>
+
+<p class="quote">{{ quote }}</p>
+
+<form method="POST">
+
+<div class="moods">
+<button name="mood" value="happy" type="submit">😊</button>
+<button name="mood" value="okay" type="submit">😐</button>
+<button name="mood" value="sad" type="submit">😔</button>
+<button name="mood" value="tired" type="submit">😴</button>
+<button name="mood" value="stressed" type="submit">😡</button>
+</div>
+
+<textarea name="thought" placeholder="Write your thoughts..."></textarea>
+
+<button class="save-btn">Save</button>
+
+</form>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+<script>
+let data = {{ graph_data|tojson }};
+
+if (data.length > 0) {
+    new Chart(document.getElementById("chart"), {
+        type: "line",
+        data: {
+            labels: data.map((_, i) => i + 1),
+            datasets: [{
+                label: "Mood Trend",
+                data: data,
+                borderWidth: 2,
+                fill: false,
+                tension: 0.3
+            }]
+        }
+    });
+}
+</script>
+
+</body>
+</html>
