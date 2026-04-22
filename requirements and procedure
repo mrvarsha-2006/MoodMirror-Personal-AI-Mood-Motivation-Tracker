@@ -1,0 +1,50 @@
+## Requirements
+🖥️ System Requirements
+Windows 10 / 11 (recommended)
+Python 3.10+
+VS Code (optional but recommended)
+📦 Python Libraries
+
+Install the following dependencies:
+
+pip install flask pandas matplotlib
+
+(Optional for future upgrades)
+
+pip install chart.js
+
+ ## Procedure
+1️⃣ Clone / Download Project
+git clone <your-repo-link>
+cd mood_app
+OR simply download ZIP and extract.
+
+2️⃣ Install Dependencies
+Run:
+pip install flask pandas matplotlib
+ 
+3️⃣ Run the Application
+python app.py
+
+4️⃣ Open in Browser
+Go to:
+http://127.0.0.1:5001
+
+ 5️⃣ How to Use
+Select your mood 😊😐😔😴😡
+Write optional thoughts 📝
+Click Save
+
+## View:
+💬 Personalized AI-style quotes
+🔥 Mood streak
+📊 Mood trend graph
+6️⃣ Auto Start (Optional)
+
+## To run on startup:
+
+Create .bat file:
+python C:\path\to\app.py
+start http://127.0.0.1:5000
+Move it to:
+shell:startup
