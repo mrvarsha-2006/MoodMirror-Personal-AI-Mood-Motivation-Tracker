@@ -1,0 +1,46 @@
+body {
+    margin:0;
+    background:linear-gradient(135deg,#0f0f1a,#1a1a2e);
+    color:white;
+    font-family:Arial;
+}
+
+.container {
+    width:85%;
+    margin:auto;
+    margin-top:40px;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(30,30,50,0.9);
+    box-shadow:0 0 50px rgba(108,99,255,0.7);
+    text-align:center;
+}
+
+.quote {
+    margin:20px;
+    color:#cfcfff;
+}
+
+.moods button {
+    font-size:30px;
+    margin:10px;
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+textarea {
+    width:80%;
+    height:80px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+.save-btn {
+    padding:10px 20px;
+    margin-top:10px;
+    background:#6c63ff;
+    border:none;
+    color:white;
+    border-radius:10px;
+}
